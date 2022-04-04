@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Todo from "../components/todo";
 import "bootstrap/dist/css/bootstrap.css";
-let local = process.env.LOCALHOST;
+let local = "https://todo-nextjs.iamswaps.vercel.app/";
 
 export async function getServerSideProps() {
   const res = await fetch(`${local}api/todos`);
