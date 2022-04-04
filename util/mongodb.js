@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 
-let uri = process.env.MONGODB_URI;
-let dbName = process.env.MONGODB_DB;
+let uri = "mongodb+srv://iamswaps:jblrVtCjrHiVQRTX@cluster0.lzwoy.mongodb.net/next-todo?retryWrites=true&w=majority";
+let dbName = "next-todo";
 
 export default async function connectToDatabase() {
   console.log("uri "+uri+"  db "+dbName)
