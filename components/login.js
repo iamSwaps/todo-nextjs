@@ -1,4 +1,4 @@
-import { useSession } from "next-auth/react"
+import { useSession, getSession } from "next-auth/react"
 import styles from "../styles/components/login.module.css";
 export default function login(){
     const { data: session, status } = useSession()
