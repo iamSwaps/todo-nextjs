@@ -1,30 +1,40 @@
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import Todo from "../components/todo";
 import "bootstrap/dist/css/bootstrap.css";
-let local = "https://todo-nextjs.iamswaps.vercel.app/";
-
+import { useState } from "react";
+let prod = "https://todo-nextjs.iamswaps.vercel.app/";
+let local ="http://localhost:3000/"
 export async function getServerSideProps() {
-  const res = await fetch(`${local}api/todos`);
+  const res = await fetch(`${prod}api/todos`);
   const data = await res.json();
 
   return { props: { data } };
 }
 
+
+
 export default function Home({ data }) {
+  const [d, setd]=useState(data)
+
+  async function refresh(){
+    const res = await fetch(`${prod}api/todos`);
+    const response = await res.json();
+    setd(response)
+  }
+
+  
+
   return (
     <div>
       <div className="d-flex flex-row-reverse">
         <div className="p-2">
-          <Link href="/">
-            <button className="btn btn-secondary">Refresh</button>
-          </Link>
+          <button className="btn btn-secondary" onClick={refresh}>Refresh</button>
         </div>
       </div>
       <div className="container">
       <ul className="list-group rounded-0 bg-transparent">
-        {data.map((d) => (
-          <Todo key={d.todo} props={d} />
+        {d.map((o) => (
+          <Todo key={o.todo} props={o} func={refresh}/>
         ))}
       </ul>
       </div>

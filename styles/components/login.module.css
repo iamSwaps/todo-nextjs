@@ -3,8 +3,9 @@
     display:flex;
     width:100%;
     text-align:center;
-    bottom:1%;
+    bottom:0;
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-    padding:5%;
+    padding:3%;
+
 }

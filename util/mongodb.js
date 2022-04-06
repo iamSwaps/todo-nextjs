@@ -4,7 +4,6 @@ let uri = "mongodb+srv://iamswaps:jblrVtCjrHiVQRTX@cluster0.lzwoy.mongodb.net/ne
 let dbName = "next-todo";
 
 export default async function connectToDatabase() {
-  console.log("uri "+uri+"  db "+dbName)
   const client = await MongoClient.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
