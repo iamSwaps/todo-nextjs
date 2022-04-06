@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from "next-auth/providers/google";
-let GOOGLE_CLIENT_ID="438141259512-2r6noo250bk3sart7ra0apegvb08n9hv.apps.googleusercontent.com"
-let GOOGLE_CLIENT_SECRET="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"
+let GOOGLE_CLIENT_ID="438141259512-dpd326fj1g1t1u0a99srhg7e9mddb05f.apps.googleusercontent.com"
+let GOOGLE_CLIENT_SECRET="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"
 
 const options = {
   providers: [
