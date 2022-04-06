@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Link from "next/link";
 import styles from "../styles/components/navbar.module.css";
+import { signIn, signOut } from "next-auth/react";
+
 export default function Navbar() {
   return (
     <>
@@ -37,6 +39,8 @@ export default function Navbar() {
               </li>
             </ul>
             <form className="d-flex">
+              <button className="btn btn-outline-danger" onClick={(e) => {e.preventDefault(); signIn("google") }}>Sign in</button>
+              <button className="btn btn-outline-danger" onClick={(e) => {e.preventDefault(); signOut() }}>Sign out</button>
               <input
                 className="form-control me-2"
                 type="search"
