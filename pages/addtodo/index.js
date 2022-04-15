@@ -33,6 +33,9 @@ export default  function AddTodo() {
     }
   return (
     <div>
+        <div>
+            <small className="text-muted" style={{textAlign:"center"}}>If your logged in then todos will be added to "Your Todos" tab</small>
+        </div>
         <input type="text" name="todo" onChange={handleChange} value={todo}  required />
         <button type="submit" className="btn btn-info" onClick={onSubmitHandler}>
           Submit
