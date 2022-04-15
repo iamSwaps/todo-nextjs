@@ -48,7 +48,7 @@ export default function Favourites({data}) {
   }
 
   async function refresh(){
-    await fetch(`${domain}api/yourtodo`, {
+    await fetch(`https://todo-nextjs.iamswaps.vercel.app/api/yourtodo`, {
       method: "POST",
       body: JSON.stringify({ user: u }),
       headers: {
