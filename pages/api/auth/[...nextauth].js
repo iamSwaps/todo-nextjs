@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from "next-auth/providers/google";
-let GOOGLE_CLIENT_ID="438141259512-2r6noo250bk3sart7ra0apegvb08n9hv.apps.googleusercontent.com"
-let GOOGLE_CLIENT_SECRET="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"
+let GOOGLE_CLIENT_ID=process.env.GOOGLE_CLIENT_ID
+let GOOGLE_CLIENT_SECRET=process.env.GOOGLE_CLIENT_SECRET
 
 
 
