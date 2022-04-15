@@ -34,7 +34,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <Link href="/favourites/">
-                  <a className="nav-link">Favourites</a>
+                  <a className="nav-link">Your Todos</a>
                 </Link>
               </li>
             </ul>

@@ -6,7 +6,7 @@ export default function Footer(){
     
     return (
         <div>
-            <Link href="/addtodo/"><button className={`${styles.footbtn} btn btn-secondary`}>+</button></Link>
+            <Link href="/addtodo"><button className={`${styles.footbtn} btn btn-secondary`}>+</button></Link>
         </div>
     )
 }

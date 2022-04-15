@@ -1,4 +1,0 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-//jblrVtCjrHiVQRTX
-// pub key fzlxxwtf
-//private key 17bd1575-3a07-4abd-aa42-5bb82b530222

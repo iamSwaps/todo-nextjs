@@ -1,7 +1,7 @@
 export default function accessdenied(){
     return(
-        <>
-            you have to login to see this page
-        </>
+        <div>
+            Please Login to check your Todos
+        </div>
     )
 }

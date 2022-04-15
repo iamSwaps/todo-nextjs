@@ -1,0 +1,31 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+//jblrVtCjrHiVQRTX
+// pub key fzlxxwtf
+//private key 17bd1575-3a07-4abd-aa42-5bb82b530222
+
+
+nextjs for client-side
+inbuilt nextjs-api for restful apis for server
+next-auth for authentication
+
+
+await fetch("../api/todos", {
+          method: "DELETE",
+          body: JSON.stringify(doc),
+        })
+
+        session ? (
+      setdoc({
+        todo:props.todo,
+        user:session.user.email
+      })
+      ):(
+        setdoc({
+          todo:props.todo,
+          user:"global"
+        })
+      ) 
+
+const domain = process.env.PRODUCTION
+  ? process.env.PRODHOST
+  : process.env.LOCALHOST;
