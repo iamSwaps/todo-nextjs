@@ -7,7 +7,7 @@ import { useSession, getSession } from "next-auth/react";
 const domain= process.env.PRODUCTION ? process.env.PRODHOST : process.env.LOCALHOST
 
 export async function getServerSideProps() {
-  const res = await fetch(`${domain}api/todos`);
+  const res = await fetch(`${process.env.PRODUCTION}api/todos`);
   const d = await res.json();
   const data= d[0].data
   return { props: { data } };
