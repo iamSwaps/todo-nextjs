@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Accessdenied from "../../components/accesdenied";
 import Todo from "../../components/todo";
 
-  const domain ="http://localhost:3000/"
+const domain= process.env.PRODUCTION ? process.env.PRODHOST : process.env.LOCALHOST
 export async function getServerSideProps(context){
 
   const sess = await getSession(context)
