@@ -7,7 +7,6 @@ import { useSession, getSession } from "next-auth/react";
 const domain= process.env.PRODUCTION ? process.env.PRODHOST : process.env.LOCALHOST
 
 export async function getServerSideProps() {
-  const domain = "http://localhost:3000/"
   const res = await fetch(`${domain}api/todos`);
   const d = await res.json();
   const data= d[0].data
