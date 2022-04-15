@@ -22,7 +22,7 @@ export default function Home({ data }) {
   const u= "global"
 
   async function refresh(){
-    const res = await fetch(`${domain}api/todos`);
+    const res = await fetch(`https://todo-nextjs.iamswaps.vercel.app/api/todos`);
     const r=await res.json()
     const data=r[0].data 
     setd(data)
